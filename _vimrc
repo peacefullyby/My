@@ -33,7 +33,6 @@ function MyDiff()
 endfunction
 
 
-
 set encoding=utf-8
 exec 'cd ' . fnameescape('d:\work')
 :imap jj <ESC>
@@ -59,4 +58,16 @@ set wrap
 set splitright
 set splitbelow
 
+"K/J keys for 5 times k/j (faster navigation)
+noremap K 5k
+noremap J 5j
 
+"Faster in-line navigation
+noremap W 5w
+noremap B 5
+
+"Resize splits with arrow keys
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize-5<CR>
+map <right> :vertical resize+5<CR>
